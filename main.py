@@ -8,12 +8,11 @@ screen = Screen()
 screen.setup(1200, 600)
 screen.bgcolor("black")
 screen.title("Welcome to Pong")
+screen.tracer(0)
 
 # Set up player paddles and locations
-player1_paddle = Paddle()
-player1_paddle.set_player_loc()
-player2_paddle = Paddle()
-player2_paddle.set_comp_loc()
+player1_paddle = Paddle((-580, 0))
+player2_paddle = Paddle((570, 0))
 
 # Set up court (net and scoreboard)
 new_net = Net()
@@ -30,6 +29,10 @@ screen.onkey(player1_paddle.down, "s")
 screen.onkey(player2_paddle.up, "o")
 screen.onkey(player2_paddle.down, "l")
 
+# Keep game on until game over
+game_is_on = True
 
+while game_is_on:
+    screen.update()
 
 screen.exitonclick()
