@@ -11,6 +11,7 @@ class Paddle(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=6, outline=1)
         self.setheading(90)
         self.goto(position)
+        self.score = 0
 
     def up(self):
         self.forward(30)
