@@ -14,7 +14,7 @@ class Scoreboard(Turtle):
 
     def print_scoreboard(self):
         self.clear()
-        self.write(f"Score: {self.p1_score}    |    Score: {self.p2_score}", False, "center", ("Arial", 14, "normal"))
+        self.write(f"Score:  {self.p1_score}    |    Score:  {self.p2_score}", False, "center", ("Arial", 16, "normal"))
 
 
 class Net(Turtle):

@@ -11,12 +11,15 @@ class Ball(Turtle):
         self.y = 0
         self.x_move = 10
         self.y_move = 10
+        self.move_speed = 0.1
         self.goto(self.x, self.y)
 
     def ball_refresh(self):
         self.x = random.randint(-300, 300)
         self.y = random.randint(-250, 250)
         self.goto(self.x, self.y)
+        self.x_move *= -1
+        self.move_speed = 0.1
 
     def ball_move(self):
         new_x = self.xcor() + self.x_move
@@ -28,3 +31,4 @@ class Ball(Turtle):
 
     def bounce_x(self):
         self.x_move *= -1
+        self.move_speed *= 0.8
